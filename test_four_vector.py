@@ -1,14 +1,5 @@
 import pytest
 from four_vector import *
-R=Four_reference_frame()
-x=sp.Symbol('x',real=True)
-y=sp.Symbol('y',real=True)
-z=sp.Symbol('z',real=True)
-t=sp.Symbol('t',real=True)
-b=sp.Symbol('b',real=True)
-b1=sp.Symbol('b1',real=True)
-b2=sp.Symbol('b2',real=True)
-v=fourvector([t,x,y,z],R)
 @pytest.fixture
 def ref_frame():
     return Four_reference_frame()
