@@ -103,15 +103,16 @@ def test_four_vector_operations(ref_frame,vector):
     v=vector
     assert v+v==v*2
     assert v-v==v*0
-    q=vector
+    phi=sp.Symbol('phi',real=True)
+    L=R.general_boost(0,0,phi)
+    q=vector.express(L)
     assert v==q
     c=sp.Symbol('c',real=True)
     assert c*v==v*c
-    q=fourvector([0,1,2,3],R)
     assert v+q==q+v
     assert v-q==-(q-v)
-
     
+
 
 
 
